@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Items List</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; padding: 20px; }
+    h1 { color: #333; }
+    ul { list-style: none; padding: 0; }
+    li { background: white; margin: 5px 0; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Список товарів з MongoDB</h1>
+  <ul>
+    <% if (items.length === 0) { %>
+      <li>Поки що немає жодного елемента.</li>
+    <% } %>
+    <% items.forEach(item => { %>
+      <li><strong><%= item.name %></strong> — <%= item.price %> грн</li>
+    <% }) %>
+  </ul>
+</body>
+</html>
